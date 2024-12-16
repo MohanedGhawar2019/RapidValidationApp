@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Credit Card Validator";
+}
+
+<h2>Credit Card Validator</h2>
+
+<form asp-controller="CreditCardValidator" asp-action="ValidateCreditCard" method="post">
+    <div>
+        <label for="creditCard">Credit Card:</label>
+        <input type="text" id="creditCard" name="creditCard" />
+    </div>
+    <button type="submit">Validate</button>
+</form>
+
+@if (ViewBag.Result != null)
+{
+    <p>@ViewBag.Result</p>
+}

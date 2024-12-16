@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "URL Validator";
+}
+
+<h2>URL Validator</h2>
+
+<form asp-controller="UrlValidator" asp-action="ValidateUrl" method="post">
+    <div>
+        <label for="url">URL:</label>
+        <input type="text" id="url" name="url" />
+    </div>
+    <button type="submit">Validate</button>
+</form>
+
+@if (ViewBag.Result != null)
+{
+    <p>@ViewBag.Result</p>
+}

@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "DateTime Validator";
+}
+
+<h2>DateTime Validator</h2>
+
+<form asp-controller="DateTimeValidator" asp-action="ValidateDateTime" method="post">
+    <div>
+        <label for="dateTime">Date/Time:</label>
+        <input type="datetime-local" id="dateTime" name="dateTime" />
+    </div>
+    <button type="submit">Validate</button>
+</form>
+
+@if (ViewBag.Result != null)
+{
+    <p>@ViewBag.Result</p>
+}

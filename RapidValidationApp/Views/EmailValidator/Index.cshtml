@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Email Validator";
+}
+
+<h2>Email Validator</h2>
+
+<form asp-controller="EmailValidator" asp-action="ValidateEmail" method="post">
+    <div>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" />
+    </div>
+    <button type="submit">Validate</button>
+</form>
+
+@if (ViewBag.Result != null)
+{
+    <p>@ViewBag.Result</p>
+}

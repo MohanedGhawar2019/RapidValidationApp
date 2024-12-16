@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Phone Number Validator";
+}
+
+<h2>Phone Number Validator</h2>
+
+<form asp-controller="PhoneNumberValidator" asp-action="ValidatePhoneNumber" method="post">
+    <div>
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" id="phoneNumber" name="phoneNumber" />
+    </div>
+    <button type="submit">Validate</button>
+</form>
+
+@if (ViewBag.Result != null)
+{
+    <p>@ViewBag.Result</p>
+}

@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Password Validator";
+}
+
+<h2>Password Validator</h2>
+
+<form asp-controller="PasswordValidator" asp-action="ValidatePassword" method="post">
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" />
+    </div>
+    <button type="submit">Validate</button>
+</form>
+
+@if (ViewBag.Result != null)
+{
+    <p>@ViewBag.Result</p>
+}
